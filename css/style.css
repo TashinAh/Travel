@@ -1,0 +1,658 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@100;300;400;600;700&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none; outline: none;
+  text-decoration: none;
+  list-style-type: none;
+  transition: all .4s cubic-bezier(.43, 1.1, .62, 1.08);
+  text-transform: capitalize;
+}
+
+a{
+  text-decoration: none;
+}
+
+section{
+  padding: 0 9%;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 6rem;
+  scroll-behavior: smooth;
+}
+.heading{
+  padding: 0;
+  display: block;
+}
+.heading p{
+  text-align: center;
+  font-size: 1.5rem;
+  color: red;
+  margin-top: 1rem;
+}
+.heading h1{
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: red;
+  display: inline-block;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+}
+.heading h1::after{
+  content: '';
+  width: 100%;
+  height: .5rem;
+  background: red;
+  bottom: 0; left: 0;
+  position: absolute;
+}
+
+/*===================== header part start =======================*/
+.header{
+  padding: 1rem 9%;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+.header-bg{
+  background: #eee;
+  backdrop-filter: blur(10px);
+}
+.navbar ul{
+  display: flex;
+  align-items: center;
+}
+.logo{
+  font-size: 3.8rem;
+  font-weight: bold;
+  color: red;
+  font-family: 'Kaushan Script', cursive;
+}
+.navbar ul li{
+  margin-right: 2rem;
+}
+.navbar ul li a{
+  font-size: 2rem;
+  color: red;
+  font-weight: bold;
+}
+.navbar ul li:hover{
+  color: red;
+}
+.navbar ul li::after{
+  content: '';
+  width: 0;
+  height: 0.2rem;
+  background: red;
+  display: block;
+  margin: auto;
+  transition: .8s;
+}
+.navbar ul li:hover::after{
+  width: 100%;
+}
+#menu-bar{
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+
+/*======================== home part start ======================*/
+.home{
+  padding: 0 0;
+}
+.home .slide{
+  min-height: 100vh;
+  background-size: cover !important;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home .slide:before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+  position: absolute;
+  z-index: -1;
+}
+.home .slide .content{
+  text-align: center;
+  width: 70rem;
+  display: none;
+}
+@keyframes fadeIn{
+  0%{
+    transform: translateY(-1rem) scale(0);
+    opacity: 0;
+  }
+}
+.home .slide .content{
+}
+.home .slide .content h3{
+  font-weight: bold;
+  font-size: 8vw;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 .5rem 1rem rgba(252, 45, 45, 0.5);
+  line-height: 1;
+  padding: 2rem 0;
+  animation: fadeIn .4s cubic-bezier(.54, 1.3, .63, 1.34) .4s backwards;
+}
+.home .swiper-slide-active .content{
+  display: inline-block;
+}
+.swiper-button-prev,
+.swiper-button-next{
+  height: 4rem;
+  width: 4rem;
+  line-height: 5rem;
+  background: transparent;
+  color: red;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover{
+  color: #fff;
+  background: red;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after{
+  font-size: 2rem;
+}
+/*======================== home part end ======================*/
+
+/*======================== about part start ======================*/
+.about{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), #b1c2db);
+}
+.about-content{
+  color: red;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+.about-content .about-part-1{
+  flex: 1 1 40rem;
+}
+.about-content .about-part-2{
+  flex: 1 1 40rem;
+}
+.about-content h3{
+  font-weight: bold;
+  font-size: 5rem;
+}
+.progress-content{
+  margin-bottom: 2rem;
+}
+.about-content p{
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  padding-right: 5rem;
+}
+.btn{
+  color: red;
+  font-weight: bold;
+  padding: 10px 25px;
+  border: 1px solid red;
+  border-radius: 8px;
+  transition: 1s;
+}
+.btn .fa-solid{
+  display: inline;
+  margin-left: 1rem;
+}
+.btn:hover{
+  background: red;
+  color: #fff;
+}
+.progress-content p{
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.progress-bar{
+  width: 100%;
+  height: 2rem;
+  border-radius: 1rem;
+  background: #959595;
+}
+.progress-bar div{
+  border-radius: 1rem;
+  background: red;
+  width: 0;
+  height: 2rem;
+}
+.progress-bar div span{
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  float: right;
+  background: #b1c2db;
+  border: .1rem solid #fff;
+  margin-top: -5px;
+  margin-right: -15px;
+  color: red;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.photoshop{
+  animation: photoshop 1s linear forwards;
+}
+@keyframes photoshop{
+  100%{
+    width: 80%;
+  }
+}
+.design{
+  animation: design 1s linear forwards;
+}
+@keyframes design{
+  100%{
+    width: 85%;
+  }
+}
+.wordpress{
+  animation: wordpress 1s linear forwards;
+}
+@keyframes wordpress{
+  100%{
+    width: 75%;
+  }
+}
+.grapic{
+  animation: grapic 1s linear forwards;
+}
+@keyframes grapic{
+  100%{
+    width: 50%;
+  }
+}
+/*======================== about part end ======================*/
+
+/*======================== service part start ======================*/
+.service{
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), #F7AEC1);
+}
+.service-content{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.service-content .service-item{
+  flex: 1 1 20rem;
+}
+.service-item{
+  text-align: center;
+  color: red;
+  padding: 20px 0;
+  border-radius: 10px;
+  margin-top: 6rem;
+  transition: .4s;
+}
+.service-item:hover{
+  background: #DB2533;
+  color: #000;
+  margin-top: 3rem;
+  box-shadow: .2rem .1rem .5rem #888;
+}
+.service-item:hover .fa-solid{
+  color: #000;
+  border: 1px solid #000;
+}
+.service-item .fa-solid{
+  font-size: 30px;
+  color: red;
+  width: 60px;
+  height: 60px;
+  border: 1px solid red;
+  line-height: 58px;
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+}
+.service-item h4{
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.service-item p{
+  font-size: 1.5rem;
+  padding: 0 1.4rem;
+}
+/*======================== service part end ======================*/
+
+/*======================== team part start ======================*/
+.team{
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+.team-content{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+.team-content .team-content_1{
+  flex: 1 1 20rem;
+}
+.team-content .team-content_1 .member-img img{
+  width: 100%;
+}
+.fa-brands{
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: red;
+  background: #fff;
+  font-size: 1.5rem;
+  padding: 4px;
+  border-radius: 50%;
+}
+.member-img{
+  position: relative;
+  margin-top: 4rem;
+}
+.overlay{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  background: linear-gradient(rgba(0, 0, 0, 0.1),red);
+  opacity: 0;
+  transition: 1s;
+  overflow-y: hidden;
+}
+.overlay:hover{
+  opacity: 1;
+}
+.desc ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.desc ul li{
+  margin-left: 10px;
+}
+.desc{
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  opacity: 0;
+  transition: 1s;
+}
+.overlay:hover .desc{
+  opacity: 1;
+  bottom: 40%;
+}
+.info{
+  color: red;
+  text-align: center;
+}
+.info h3{
+  font-size: 3rem;
+  font-weight: normal;
+  margin-bottom: -1rem;
+}
+.info small{
+  font-size: 1.2rem;
+}
+.info p{
+  margin-top: .5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+/*======================== team part end ======================*/
+
+
+/*======================== domain part start ======================*/
+.domain-part{
+  width: 100%;
+  height: 45vh;
+  background: url(../image/do.webp) no-repeat 50%;
+  background-size: cover;
+}
+.domain-content{
+  color: red;
+  width: 100%;
+  height: 45vh;
+  text-align: center;
+  top: 30%;
+  transform: translateY(30%);
+}
+.domain-content h3{
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 40px;
+  color: #b50505;
+}
+.domain-content a{
+  font-size: 1.8rem;
+  color: red;
+  padding: 14px 30px;
+  border: 1px solid red;
+  border-radius: 10px;
+  transition: 1s;
+  font-weight: bold;
+  color: #fff;
+}
+.domain-content a:hover{
+  background: #fff;
+  color: red;
+}
+/*======================== domain part end ======================*/
+
+
+/*====================== price plan part start ======================*/
+.price{
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+.price-plan, .testi-content{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.price-plan .price-content{
+  flex: 1 1 20rem;
+  margin-top: 3rem;
+  transition: .4s;
+}
+.price-plan .price-content:hover{
+  box-shadow: .2rem .2rem .5rem 0.1rem #555;
+  transform: scale(1.01);
+}
+.price-plan .price-content .price-head{
+  text-align: center;
+  background: red;
+  color: #fff;
+  margin-top: 1rem;
+  margin-bottom: -1rem;
+}
+.price-plan .price-content .price-head h2{
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+.price-plan .price-content .price-head p{
+  font-size: 1.4rem;
+  line-height: 1rem;
+  padding-bottom: 1rem;
+}
+.price-content_1{
+  padding: .8rem 1rem;
+  background: #F1CACA;
+}
+.price-content_1 ul li{
+  font-size: 1.6rem;
+  line-height: 3.8rem;
+}
+.price-content_1 ul li i{
+  margin-right: .6rem;
+}
+.price-content_1 ul li i.fa-circle-check{
+  color: green;
+}
+.price-content_1 ul li i.fa-circle-xmark{
+  color: red;
+}
+.price-btn{
+  background: #fff;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.price-btn a{
+  font-size: 1.6rem;
+  padding: 7px 14px;
+  font-weight: normal;
+}
+/*======================== price plan part end ======================*/
+/*================= testimonial part start ======================*/
+.testimonial{
+  margin-bottom: 4rem;
+}
+.single-testi{
+  flex: 1 1 20rem;
+}
+.testi-img{
+  position: relative;
+}
+.single-testi img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0rem -.01rem 2px #555;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  object-fit: cover;
+}
+.single-testi{
+  text-align: center;
+  background: red;
+  border-radius: 10px;
+  margin-top: 80px;
+  transition: 0.6s;
+}
+.single-testi:hover{
+  margin-top: 40px;
+}
+.testi-test{
+  padding: 40px 5px 15px 5px;
+  transition: 1s;
+  border-radius: 10px;
+}
+.testi-test:hover{
+  box-shadow: 1px 1px 12px 1px #000;
+
+}
+.testi-test p{
+  font-size: 1.5rem;
+  line-height: 3rem;
+  color: #222;
+}
+.testi-test h5{
+  font-weight: bold;
+  color: #fff;
+  font-size: 2.4rem;
+}
+.testi-test h5 span{
+  font-weight: 100;
+  font-size: 1.4rem;
+}
+.testi-test .fa-solid{
+  color: #fff;
+}
+.testi-test p span{
+  color: #fff;
+  font-size: 2.6rem;
+  line-height: 0px;
+}
+.fa-quote-right{
+  font-size: .8rem;
+  margin-top: 0;
+}
+/*======================== testimonial part end ======================*/
+/*======================== contact part start ======================*/
+.contact{
+  background: #efefef;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+.contact .heading{
+  margin-bottom: 3rem;
+}
+.form-control{
+  font-size: 2.5rem;
+  border: 1px solid red;
+  margin-bottom: 18px;
+  padding: .6rem 1.2rem;
+  border-radius: .5rem;
+}
+.follow{
+  background: #fff;
+  padding: 10px 10px;
+  margin: 10px 0 30px 40px;
+  color: red;
+  border-radius: .5rem;
+}
+.follow b{
+  font-size: 2rem;
+  margin-right: 10px;
+  letter-spacing: 1px;
+}
+.follow i{
+  font-size: 2rem;
+  margin-right: .5rem;
+}
+.follow p{
+  display: inline;
+  font-size: 1.5rem;
+}
+.follow .fa-brands{
+  display: inline;
+  padding: 5px;
+  color: red;
+}
+.btn-danger{
+  font-size: 1.5rem;
+  background: none;
+}
+/*======================== contact part end ======================*/
+.footer-part{
+  background: red;
+  color: #fff;
+}
+.footer-part p{
+  font-size: 1.7rem;
+  text-align: center;
+  padding: 15px 0;
+}
+
